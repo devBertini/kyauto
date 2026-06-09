@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KyAuto — Support</title>
+<meta name="description" content="KyAuto support and FAQ. Contact, subscriptions, backup, privacy.">
+<style>
+  :root{--amber:#FF8820;--blue:#5858C0;--text:#1d1d22;--muted:#6b6b73;--bg:#f6f6f9;--line:#e6e6ec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+  a{color:var(--amber);text-decoration:none}a:hover{text-decoration:underline}
+  .hero{background:linear-gradient(135deg,var(--blue),var(--amber));color:#fff;padding:48px 20px 40px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:26px}
+  .brand svg{width:34px;height:34px}
+  .hero h1{margin:18px 0 6px;font-size:30px;font-weight:800}.hero p{margin:0;opacity:.92}
+  main{max-width:760px;margin:-22px auto 60px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+  .toggle{display:flex;gap:8px;margin:0 0 18px}
+  .toggle button{border:1px solid var(--line);background:#fff;color:var(--text);padding:6px 14px;border-radius:999px;font-size:14px;cursor:pointer}
+  .toggle button.active{background:var(--amber);color:#fff;border-color:var(--amber)}
+  .contact{background:rgba(255,136,32,.10);border:1px solid rgba(255,136,32,.25);border-radius:14px;padding:16px 18px;margin:0 0 22px}
+  .contact a{font-weight:700}
+  h2{font-size:18px;margin:22px 0 6px}
+  details{border:1px solid var(--line);border-radius:12px;padding:4px 14px;margin:10px 0;background:#fff}
+  summary{cursor:pointer;font-weight:600;padding:10px 0}
+  details p{margin:0 0 12px}
+  footer{max-width:760px;margin:0 auto 50px;padding:0 28px;color:var(--muted);font-size:13px;text-align:center}
+  .lang[hidden]{display:none}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11h.5A1.5 1.5 0 0 1 21 12.5V17a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4.5A1.5 1.5 0 0 1 4.5 11H5zm2.2 0h9.6l-1-3H8.2l-1 3zM7 14.5A1.25 1.25 0 1 0 7 12a1.25 1.25 0 0 0 0 2.5zm10 0A1.25 1.25 0 1 0 17 12a1.25 1.25 0 0 0 0 2.5z"/></svg>
+      KyAuto
+    </div>
+    <h1>Support</h1>
+    <p>We're here to help.</p>
+  </div>
+</header>
+
+<main>
+  <div class="toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-pt" onclick="setLang('pt')">Português</button>
+  </div>
+
+  <div class="contact">
+    📧 <strong>Contact:</strong> <a href="mailto:bertini.b@icloud.com">bertini.b@icloud.com</a>
+    — <span class="lang" id="resp-en">we usually reply within 48 hours.</span>
+    <span class="lang" id="resp-pt" hidden>normalmente respondemos em até 48 horas.</span>
+  </div>
+
+  <!-- ENGLISH -->
+  <section class="lang" id="lang-en">
+    <h2>Frequently asked questions</h2>
+
+    <details><summary>Is my data safe? Where is it stored?</summary>
+      <p>Yes. KyAuto is 100% offline. Everything is stored only on your iPhone, encrypted. No accounts,
+         no cloud of ours, no tracking. See the <a href="../privacy/">Privacy Policy</a>.</p></details>
+
+    <details><summary>How do I restore my purchase?</summary>
+      <p>Open <strong>Settings → Restore purchases</strong> inside the app. Purchases and subscriptions
+         are tied to your Apple ID, so they restore on any device signed in with the same account.</p></details>
+
+    <details><summary>How do I cancel my subscription?</summary>
+      <p>Subscriptions are managed by Apple: open the <strong>App Store</strong> → tap your photo →
+         <strong>Subscriptions</strong> → KyAuto → Cancel. Your access stays active until the end of the
+         current period.</p></details>
+
+    <details><summary>What does the free version include?</summary>
+      <p>A full dashboard, 1 vehicle, 20 maintenance records, 30 fuel-ups and 5 documents. Pro removes the
+         limits and adds reports, PDF export, backup, multiple drivers, CSV import and widgets.</p></details>
+
+    <details><summary>How do I back up or move my data?</summary>
+      <p>Pro users: <strong>Settings → Backup → Export</strong> creates a file you can save to iCloud Drive
+         or Files, and <strong>Restore</strong> imports it on another device.</p></details>
+
+    <details><summary>Which units and currency does it use?</summary>
+      <p>It adapts to your region automatically (km/L or mi/gal, and your local currency). You can force
+         metric or imperial in <strong>Settings → Units</strong>.</p></details>
+
+    <details><summary>Does it work in other languages?</summary>
+      <p>Yes — English and Portuguese (Brazil), selected automatically by your device language.</p></details>
+
+    <details><summary>How do I export a PDF report?</summary>
+      <p>Open <strong>Reports → Export PDF…</strong> (Pro). Choose exactly what to include — financial summary,
+         category breakdown, consumption, and maintenance/fuel/cost history — and optionally attach all your
+         documents (photos and PDFs) on the following pages. Quick presets: Complete, Financial, Resale.</p></details>
+
+    <details><summary>Can I attach the invoice/quote to a maintenance?</summary>
+      <p>Yes. When adding or editing a maintenance record, tap <strong>Attach invoice / quote</strong> to add one
+         or more files or photos. They are saved encrypted and also appear in the Documents tab under a
+         “Maintenance / date / type” folder.</p></details>
+  </section>
+
+  <!-- PORTUGUÊS -->
+  <section class="lang" id="lang-pt" hidden>
+    <h2>Perguntas frequentes</h2>
+
+    <details><summary>Meus dados estão seguros? Onde ficam?</summary>
+      <p>Sim. O KyAuto é 100% offline. Tudo fica só no seu iPhone, criptografado. Sem contas, sem nuvem
+         nossa, sem rastreamento. Veja a <a href="../privacy/">Política de Privacidade</a>.</p></details>
+
+    <details><summary>Como restauro minha compra?</summary>
+      <p>Abra <strong>Ajustes → Restaurar compras</strong> dentro do app. Compras e assinaturas ficam
+         vinculadas ao seu Apple ID e são restauradas em qualquer aparelho com a mesma conta.</p></details>
+
+    <details><summary>Como cancelo a assinatura?</summary>
+      <p>As assinaturas são gerenciadas pela Apple: abra a <strong>App Store</strong> → toque na sua foto →
+         <strong>Assinaturas</strong> → KyAuto → Cancelar. O acesso continua até o fim do período atual.</p></details>
+
+    <details><summary>O que a versão gratuita inclui?</summary>
+      <p>Dashboard completo, 1 veículo, 20 manutenções, 30 abastecimentos e 5 documentos. O Pro tira os
+         limites e adiciona relatórios, exportação em PDF, backup, múltiplos condutores, importação de CSV
+         e widgets.</p></details>
+
+    <details><summary>Como faço backup ou movo meus dados?</summary>
+      <p>No Pro: <strong>Ajustes → Backup → Exportar</strong> gera um arquivo para salvar no iCloud Drive ou
+         Arquivos, e <strong>Restaurar</strong> importa em outro aparelho.</p></details>
+
+    <details><summary>Quais unidades e moeda usa?</summary>
+      <p>Adapta-se à sua região automaticamente (km/L ou mi/gal e a moeda local). Você pode forçar métrico
+         ou imperial em <strong>Ajustes → Unidades</strong>.</p></details>
+
+    <details><summary>Funciona em outros idiomas?</summary>
+      <p>Sim — Inglês e Português (Brasil), escolhidos automaticamente pelo idioma do aparelho.</p></details>
+
+    <details><summary>Como exporto um relatório em PDF?</summary>
+      <p>Abra <strong>Relatórios → Exportar PDF…</strong> (Pro). Escolha exatamente o que incluir — resumo
+         financeiro, detalhamento por categoria, consumo e histórico de manutenções/abastecimentos/custos — e,
+         se quiser, anexe todos os seus documentos (fotos e PDFs) nas páginas seguintes. Predefinições:
+         Completo, Financeiro, Revenda.</p></details>
+
+    <details><summary>Posso anexar a NF/orçamento a uma manutenção?</summary>
+      <p>Sim. Ao adicionar ou editar uma manutenção, toque em <strong>Anexar NF / orçamento</strong> para incluir
+         um ou mais arquivos ou fotos. Eles ficam criptografados e também aparecem na aba Documentos, numa
+         pasta “Manutenção / data / tipo”.</p></details>
+  </section>
+</main>
+
+<footer>© 2026 KyAuto · <a href="../">Home</a> · <a href="../privacy/">Privacy</a></footer>
+
+<script>
+  function setLang(l){
+    document.querySelectorAll('#lang-en,#resp-en').forEach(e=>e.hidden=(l!=='en'));
+    document.querySelectorAll('#lang-pt,#resp-pt').forEach(e=>e.hidden=(l!=='pt'));
+    document.getElementById('btn-en').classList.toggle('active', l==='en');
+    document.getElementById('btn-pt').classList.toggle('active', l==='pt');
+    document.documentElement.lang = l==='pt' ? 'pt-BR' : 'en';
+  }
+  if((navigator.language||'').toLowerCase().startsWith('pt')) setLang('pt');
+</script>
+</body>
+</html>

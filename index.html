@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KyAuto — Your vehicle, all in one place</title>
+<meta name="description" content="Track fuel, maintenance, costs, documents and smart reminders for your car, motorcycle or truck. 100% on your device.">
+<style>
+  :root{--amber:#FF8820;--blue:#5858C0;--ink:#0E0E12;--text:#1d1d22;--muted:#6b6b73;--bg:#f6f6f9;--line:#e6e6ec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+  a{color:var(--amber);text-decoration:none}a:hover{text-decoration:underline}
+  .hero{background:linear-gradient(135deg,var(--blue),var(--amber));color:#fff;padding:64px 20px 56px;text-align:center}
+  .brand{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:30px}
+  .brand svg{width:40px;height:40px}
+  .hero h1{margin:20px auto 10px;font-size:34px;max-width:620px;font-weight:800}
+  .hero p{margin:0 auto;max-width:560px;opacity:.94;font-size:18px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:44px 0}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+  .card h3{margin:0 0 6px;font-size:17px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  .ico{width:40px;height:40px;border-radius:11px;background:rgba(255,136,32,.14);color:#b35e10;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:12px}
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:10px 0 40px}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+  .plan.pro{border-color:var(--amber);box-shadow:0 8px 24px rgba(255,136,32,.18)}
+  .plan h3{margin:0 0 10px}
+  .plan ul{margin:0;padding-left:18px;color:var(--muted)}
+  .center{text-align:center}
+  .priv{color:#fff;opacity:.9;font-size:14px;margin-top:18px}
+  footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+  @media(max-width:560px){.plans{grid-template-columns:1fr}.hero h1{font-size:27px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="brand">
+    <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11h.5A1.5 1.5 0 0 1 21 12.5V17a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4.5A1.5 1.5 0 0 1 4.5 11H5zm2.2 0h9.6l-1-3H8.2l-1 3zM7 14.5A1.25 1.25 0 1 0 7 12a1.25 1.25 0 0 0 0 2.5zm10 0A1.25 1.25 0 1 0 17 12a1.25 1.25 0 0 0 0 2.5z"/></svg>
+    KyAuto
+  </div>
+  <h1>Your vehicle, all in one place</h1>
+  <p>Fuel, maintenance, costs, documents and smart reminders for your car, motorcycle or truck — 100% on your device.</p>
+  <div class="priv">No accounts · No cloud · No tracking</div>
+</header>
+
+<div class="wrap">
+  <div class="grid">
+    <div class="card"><div class="ico">⛽</div><h3>Fuel &amp; consumption</h3><p>Log fuel-ups and get automatic average consumption and cost per distance.</p></div>
+    <div class="card"><div class="ico">🔧</div><h3>Maintenance</h3><p>Oil, filters, brakes, tires and services — attach the invoice or quote.</p></div>
+    <div class="card"><div class="ico">🔔</div><h3>Smart reminders</h3><p>By date and by odometer — never miss vehicle tax, licensing or an oil change.</p></div>
+    <div class="card"><div class="ico">📄</div><h3>Documents</h3><p>Keep registration, insurance, contracts and photos encrypted on device.</p></div>
+    <div class="card"><div class="ico">📊</div><h3>Reports</h3><p>12-month spending, category breakdown and a cost forecast. Export to PDF.</p></div>
+    <div class="card"><div class="ico">🔒</div><h3>Private by design</h3><p>Everything stays on your iPhone, encrypted. Nothing leaves unless you export it.</p></div>
+  </div>
+
+  <h2 class="center">Free &amp; Pro</h2>
+  <div class="plans">
+    <div class="plan">
+      <h3>Free</h3>
+      <ul>
+        <li>Full dashboard</li>
+        <li>1 vehicle</li>
+        <li>20 maintenance records</li>
+        <li>30 fuel-ups · 5 documents</li>
+      </ul>
+    </div>
+    <div class="plan pro">
+      <h3>Pro</h3>
+      <ul>
+        <li>Unlimited vehicles, history &amp; documents</li>
+        <li>Reports, forecast &amp; PDF export</li>
+        <li>Backup, multiple drivers, CSV import</li>
+        <li>Home-screen widgets</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="center"><a href="./privacy/">Privacy Policy</a> · <a href="./support/">Support</a> · <a href="./terms/">Terms</a></p>
+</div>
+
+<footer>© 2026 KyAuto · bertini.b@icloud.com</footer>
+</body>
+</html>
