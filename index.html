@@ -16,6 +16,9 @@
   .hero h1{margin:20px auto 10px;font-size:34px;max-width:620px;font-weight:800}
   .hero p{margin:0 auto;max-width:560px;opacity:.94;font-size:18px}
   .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  .toggle{display:flex;gap:8px;justify-content:center;margin:28px 0 0}
+  .toggle button{border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;padding:6px 14px;border-radius:999px;font-size:14px;cursor:pointer}
+  .toggle button.active{background:#fff;color:var(--blue);border-color:#fff;font-weight:700}
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:44px 0}
   .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
   .card h3{margin:0 0 6px;font-size:17px}
@@ -29,6 +32,7 @@
   .center{text-align:center}
   .priv{color:#fff;opacity:.9;font-size:14px;margin-top:18px}
   footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+  .lang[hidden]{display:none}
   @media(max-width:560px){.plans{grid-template-columns:1fr}.hero h1{font-size:27px}}
 </style>
 </head>
@@ -38,46 +42,109 @@
     <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11h.5A1.5 1.5 0 0 1 21 12.5V17a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4.5A1.5 1.5 0 0 1 4.5 11H5zm2.2 0h9.6l-1-3H8.2l-1 3zM7 14.5A1.25 1.25 0 1 0 7 12a1.25 1.25 0 0 0 0 2.5zm10 0A1.25 1.25 0 1 0 17 12a1.25 1.25 0 0 0 0 2.5z"/></svg>
     KyAuto
   </div>
-  <h1>Your vehicle, all in one place</h1>
-  <p>Fuel, maintenance, costs, documents and smart reminders for your car, motorcycle or truck — 100% on your device.</p>
-  <div class="priv">No accounts · No cloud · No tracking</div>
+
+  <span class="lang" id="hero-en">
+    <h1>Your vehicle, all in one place</h1>
+    <p>Fuel, maintenance, costs, documents and smart reminders for your car, motorcycle or truck — 100% on your device.</p>
+    <div class="priv">No accounts · No cloud · No tracking</div>
+  </span>
+  <span class="lang" id="hero-pt" hidden>
+    <h1>Seu veículo, tudo num só lugar</h1>
+    <p>Combustível, manutenção, custos, documentos e lembretes inteligentes para seu carro, moto ou caminhão — 100% no seu aparelho.</p>
+    <div class="priv">Sem contas · Sem nuvem · Sem rastreamento</div>
+  </span>
+
+  <div class="toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-pt" onclick="setLang('pt')">Português</button>
+  </div>
 </header>
 
 <div class="wrap">
-  <div class="grid">
-    <div class="card"><div class="ico">⛽</div><h3>Fuel &amp; consumption</h3><p>Log fuel-ups and get automatic average consumption and cost per distance.</p></div>
-    <div class="card"><div class="ico">🔧</div><h3>Maintenance</h3><p>Oil, filters, brakes, tires and services — attach the invoice or quote.</p></div>
-    <div class="card"><div class="ico">🔔</div><h3>Smart reminders</h3><p>By date and by odometer — never miss vehicle tax, licensing or an oil change.</p></div>
-    <div class="card"><div class="ico">📄</div><h3>Documents</h3><p>Keep registration, insurance, contracts and photos encrypted on device.</p></div>
-    <div class="card"><div class="ico">📊</div><h3>Reports</h3><p>12-month spending, category breakdown and a cost forecast. Export to PDF.</p></div>
-    <div class="card"><div class="ico">🔒</div><h3>Private by design</h3><p>Everything stays on your iPhone, encrypted. Nothing leaves unless you export it.</p></div>
-  </div>
-
-  <h2 class="center">Free &amp; Pro</h2>
-  <div class="plans">
-    <div class="plan">
-      <h3>Free</h3>
-      <ul>
-        <li>Full dashboard</li>
-        <li>1 vehicle</li>
-        <li>20 maintenance records</li>
-        <li>30 fuel-ups · 5 documents</li>
-      </ul>
+  <!-- ENGLISH -->
+  <section class="lang" id="lang-en">
+    <div class="grid">
+      <div class="card"><div class="ico">⛽</div><h3>Fuel &amp; consumption</h3><p>Log fuel-ups and get automatic average consumption and cost per distance.</p></div>
+      <div class="card"><div class="ico">🔧</div><h3>Maintenance</h3><p>Oil, filters, brakes, tires and services — attach the invoice or quote.</p></div>
+      <div class="card"><div class="ico">🔔</div><h3>Smart reminders</h3><p>By date and by odometer — never miss vehicle tax, licensing or an oil change.</p></div>
+      <div class="card"><div class="ico">📄</div><h3>Documents</h3><p>Keep registration, insurance, contracts and photos encrypted on device.</p></div>
+      <div class="card"><div class="ico">📊</div><h3>Reports</h3><p>12-month spending, category breakdown and a cost forecast. Export to PDF.</p></div>
+      <div class="card"><div class="ico">🔒</div><h3>Private by design</h3><p>Everything stays on your iPhone, encrypted. Nothing leaves unless you export it.</p></div>
     </div>
-    <div class="plan pro">
-      <h3>Pro</h3>
-      <ul>
-        <li>Unlimited vehicles, history &amp; documents</li>
-        <li>Reports, forecast &amp; PDF export</li>
-        <li>Backup, multiple drivers, CSV import</li>
-        <li>Home-screen widgets</li>
-      </ul>
-    </div>
-  </div>
 
-  <p class="center"><a href="./privacy/">Privacy Policy</a> · <a href="./support/">Support</a> · <a href="./terms/">Terms</a></p>
+    <h2 class="center">Free &amp; Pro</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Free</h3>
+        <ul>
+          <li>Full dashboard</li>
+          <li>1 vehicle</li>
+          <li>20 maintenance records</li>
+          <li>30 fuel-ups · 5 documents</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <h3>Pro</h3>
+        <ul>
+          <li>Unlimited vehicles, history &amp; documents</li>
+          <li>Reports, forecast &amp; PDF export</li>
+          <li>Backup, multiple drivers, CSV import</li>
+          <li>Home-screen widgets</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="center"><a href="./privacy/">Privacy Policy</a> · <a href="./support/">Support</a> · <a href="./terms/">Terms</a></p>
+  </section>
+
+  <!-- PORTUGUÊS -->
+  <section class="lang" id="lang-pt" hidden>
+    <div class="grid">
+      <div class="card"><div class="ico">⛽</div><h3>Combustível e consumo</h3><p>Registre abastecimentos e veja consumo médio e custo por distância automaticamente.</p></div>
+      <div class="card"><div class="ico">🔧</div><h3>Manutenção</h3><p>Óleo, filtros, freios, pneus e serviços — anexe a nota ou o orçamento.</p></div>
+      <div class="card"><div class="ico">🔔</div><h3>Lembretes inteligentes</h3><p>Por data e por hodômetro — nunca perca IPVA, licenciamento ou troca de óleo.</p></div>
+      <div class="card"><div class="ico">📄</div><h3>Documentos</h3><p>Mantenha CRLV, seguro, contratos e fotos criptografados no aparelho.</p></div>
+      <div class="card"><div class="ico">📊</div><h3>Relatórios</h3><p>Gastos de 12 meses, detalhamento por categoria e previsão de custo. Exporte em PDF.</p></div>
+      <div class="card"><div class="ico">🔒</div><h3>Privado por princípio</h3><p>Tudo fica no seu iPhone, criptografado. Nada sai a não ser que você exporte.</p></div>
+    </div>
+
+    <h2 class="center">Grátis e Pro</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Grátis</h3>
+        <ul>
+          <li>Dashboard completo</li>
+          <li>1 veículo</li>
+          <li>20 manutenções</li>
+          <li>30 abastecimentos · 5 documentos</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <h3>Pro</h3>
+        <ul>
+          <li>Veículos, histórico e documentos ilimitados</li>
+          <li>Relatórios, previsão e exportação em PDF</li>
+          <li>Backup, múltiplos condutores, importação CSV</li>
+          <li>Widgets na tela de início</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="center"><a href="./privacy/">Política de Privacidade</a> · <a href="./support/">Suporte</a> · <a href="./terms/">Termos</a></p>
+  </section>
 </div>
 
 <footer>© 2026 KyAuto · bertini.b@icloud.com</footer>
+
+<script>
+  function setLang(l){
+    document.querySelectorAll('#hero-en,#lang-en').forEach(e=>e.hidden=(l!=='en'));
+    document.querySelectorAll('#hero-pt,#lang-pt').forEach(e=>e.hidden=(l!=='pt'));
+    document.getElementById('btn-en').classList.toggle('active', l==='en');
+    document.getElementById('btn-pt').classList.toggle('active', l==='pt');
+    document.documentElement.lang = l==='pt' ? 'pt-BR' : 'en';
+  }
+  if((navigator.language||'').toLowerCase().startsWith('pt')) setLang('pt');
+</script>
 </body>
 </html>
